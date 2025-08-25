@@ -11,6 +11,12 @@ public class Automovil extends Transporte {
 		validarLimitePaquetes(limitePaquetes);
 		this.limitePaquetes = limitePaquetes;
 	}
+	
+	@Override
+	public boolean cargarPaquete(Paquete paq) {
+		if (this.esPaqueteValido(paq)) return super.cargarPaquete(paq);
+		return false;
+	}
 
 	@Override
 	public int costoTotalXViaje() {

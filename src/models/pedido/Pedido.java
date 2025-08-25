@@ -25,14 +25,14 @@ public class Pedido {
 	
 	public void agregarPaquete(Paquete paq) {
 		if (this.estaCerrado) throw new RuntimeException("No se pueden agregar paquetes a un pedido cerrado");
-		this.total += paq.getPrecio();
+		this.total += paq.totalPrecio();
 		this.carrito.add(paq);
 	}
 	
 	public boolean quitarPaquete(int idPaq) {
 		Paquete paq = buscarPaquete(idPaq);
 		if (paq == null) throw new RuntimeException("El paquete no se encuentra en el carrito.");
-		this.total -= paq.getPrecio();
+		this.total -= paq.totalPrecio();
 		return this.carrito.remove(paq);
 	}
 	

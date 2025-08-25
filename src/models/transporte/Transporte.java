@@ -77,6 +77,10 @@ public abstract class Transporte {
 		return this.paquetes.size();
 	}
 	
+	public List<Paquete> getPaquetes() {
+		return new ArrayList<>(this.paquetes);
+	}
+	
 	public  boolean hayEspacio() {
 		return volumenCargamento() <= this.capacidadVolTotal;
 	}
