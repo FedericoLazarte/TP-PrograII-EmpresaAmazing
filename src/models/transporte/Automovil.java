@@ -18,7 +18,7 @@ public class Automovil extends Transporte {
 	}
 
 	@Override
-	public boolean paqueteValido(Paquete paq) {
+	public boolean esPaqueteValido(Paquete paq) {
 		boolean esOrdinario = super.esPaqueteOrdinario(paq);
 		boolean volMenor2000 = this.esVolumenValidoPaqOr(paq);
 		boolean capacidadMaxima = super.hayEspacio();

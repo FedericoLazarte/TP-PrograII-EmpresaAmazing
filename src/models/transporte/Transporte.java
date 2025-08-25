@@ -27,7 +27,7 @@ public abstract class Transporte {
 	
 	public abstract int costoTotalXViaje();
 	
-	public abstract boolean paqueteValido(Paquete paq);
+	public abstract boolean esPaqueteValido(Paquete paq);
 	
 	public boolean cargarPaquete(Paquete paq) {
 		if (estaPaquete(paq.getIdPaquete())) {
