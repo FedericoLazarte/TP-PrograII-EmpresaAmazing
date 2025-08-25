@@ -1,0 +1,96 @@
+# Ignora los archivos compilados de Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignora los archivos generados por Eclipse
+.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# Ignora los archivos de configuración de IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Ignora los archivos de Maven
+target/
+**/target/
+**/pom.xml.tag
+**/pom.xml.releaseBackup
+**/pom.xml.versionsBackup
+**/pom.xml.next
+**/release.properties
+**/dependency-reduced-pom.xml
+**/buildNumber.properties
+**/.mvn/timing.properties
+
+# Ignora los archivos de Gradle
+.gradle/
+**/build/
+**/.gradle
+**/gradle-app.setting
+**/gradlew
+**/gradlew.bat
+
+# Ignora los archivos de logs
+*.log
+logs/
+
+# Ignora los archivos de configuración de Spring Boot
+application.properties
+application.yml
+application-*.properties
+application-*.yml
+
+# Ignora los archivos de configuración de Docker
+docker-compose.yml
+Dockerfile
+
+# Ignora los archivos de Node.js y npm
+node_modules/
+npm-debug.log
+
+# Ignora los archivos de VS Code
+.vscode/
+
+# Ignora los archivos de Mac
+.DS_Store
+
+# Ignora los archivos de Windows
+Thumbs.db
+
+# Ignora los archivos de IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Ignora los archivos de NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Archivos de Eclipse
+.classpath
+.project
+.factorypath
+.settings/
+
+# Archivos de Maven Wrapper
+.mvn/wrapper/
+mvnw
+mvnw.cmd
