@@ -105,7 +105,7 @@ public abstract class Transporte {
 		if (this == other) return true;
 		if (other == null || this.getClass() != other.getClass()) return false;
 		Transporte t = (Transporte) other;
-		if (totalPaquetesCargados() == 0 || t.totalPaquetesCargados() == 0) return false;
+		if (this.paquetes.size() == 0 || t.paquetes.size() == 0) return false;
 		return this.paquetes.equals(t.paquetes);
 	}
 	
@@ -127,8 +127,8 @@ public abstract class Transporte {
 	}
 
 	private void validarPatente(String patente) {
-		if (patente == null || patente.length() != 6)
-			throw new IllegalArgumentException("La pantente no puede estar vacía y debe tener al menos 6 caracteres.");
+		if (patente == null || patente.length() == 0)
+			throw new IllegalArgumentException("La pantente no puede estar vacía ni ser nula.");
 		
 	}
 	

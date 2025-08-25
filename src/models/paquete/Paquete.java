@@ -68,10 +68,10 @@ public abstract class Paquete {
 	}
 	
 	private void validarPrecio(int precio) {
-		if (precio < 1)  new IllegalArgumentException("El precio no puede ser menor igual a cero.");
+		if (precio <= 0)  new IllegalArgumentException("El precio no puede ser menor igual a cero.");
 	}
 	
 	private void validarVolumen(int vol) {
-		if (vol < 1) new IllegalArgumentException("El voluvmen no puede ser menor o igual a cero");
+		if (vol <= 0) new IllegalArgumentException("El voluvmen no puede ser menor o igual a cero");
 	}
 }

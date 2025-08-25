@@ -7,8 +7,8 @@ import java.util.HashMap;
 import org.junit.Before;
 import org.junit.Test;
 
-import empresa.EmpresaAmazing;
-import empresa.IEmpresa;
+import controller.empresa.EmpresaAmazing;
+import controller.empresa.IEmpresa;
 
 public class EmpresaAmazingTest {
 	private String cuit;

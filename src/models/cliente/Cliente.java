@@ -2,12 +2,11 @@ package models.cliente;
 
 public class Cliente {
 	private String nombre;
-	private String dni;
+	private int dni;
 	private String direccion;
 	
-	public Cliente(String nombre, String dni, String direccion) {
+	public Cliente(String nombre, int dni, String direccion) {
 		validarNombre(nombre);
-		validarDni(dni);
 		validarDireccion(direccion);
 		this.nombre = nombre;
 		this.dni = dni;
@@ -16,10 +15,6 @@ public class Cliente {
 
 	public String getNombre() {
 		return nombre;
-	}
-
-	public String getDni() {
-		return dni;
 	}
 
 	public String getDireccion() {
@@ -45,17 +40,8 @@ public class Cliente {
 			throw new IllegalArgumentException("El nombre no puede ser vacío o tener menos de 4 caracteres, ni superar los 100 caracteres.");
 	}
 	
-	private void validarDni(String dni) {
-		if (dni == null || dni.length() != 8)
-			throw new IllegalArgumentException("El dni no puede ser vacío o tener un largo distinto de 8");
-	}
-	
 	private void validarDireccion(String dir) {
 		if (dir == null || dir.length() < 4 || dir.length() > 200)
 			throw new IllegalArgumentException("La dirección no puede ser vacía, ni tener menos de 4 caracteres o más de 200.");
 	}
-	
-	
-	
-	
 }

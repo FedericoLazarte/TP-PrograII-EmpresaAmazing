@@ -18,7 +18,7 @@ public class PaqueteEspecial extends Paquete {
 
 	@Override
 	public int totalPrecio() {
-		int sumaPorcentaje = super.getPrecio() + (super.getIdPaquete() * this.porcentaje / 100);
+		int sumaPorcentaje = super.getPrecio() + (super.getPrecio() * this.porcentaje / 100);
 		if (super.getVolumen() >= 5000) return sumaPorcentaje + (this.adicional * 2);
 		if (super.getVolumen() >= 3000) return sumaPorcentaje + this.adicional;
 		return sumaPorcentaje;
@@ -52,10 +52,10 @@ public class PaqueteEspecial extends Paquete {
 	}
 	
 	private void validarAdicional(int ad) {
-		if (ad < 1) throw new RuntimeException("El adicional no puede ser menor o igual a cero.");
+		if (ad <= 0) throw new RuntimeException("El adicional no puede ser menor o igual a cero.");
 	}
 	
 	private void validarPorcentaje(int porcentaje) {
-		if (porcentaje < 1) throw new RuntimeException("El porcentaje no puede ser menor o igual a cero.");
+		if (porcentaje <= 0) throw new RuntimeException("El porcentaje no puede ser menor o igual a cero.");
 	}
 }

@@ -5,8 +5,6 @@ import java.util.Objects;
 public class PaqueteOrdinario extends Paquete {
 	private int costoEnvio;
 	
-	
-
 	public PaqueteOrdinario(int volumen, int precio, int costoEnvio) {
 		super(volumen, precio);
 		validarCosto(costoEnvio);
@@ -35,8 +33,8 @@ public class PaqueteOrdinario extends Paquete {
 		if (this == other) return true;
 		if (other == null || this.getClass() != other.getClass()) return false;
 		if (!super.equals(other)) return false;
-		PaqueteOrdinario parOr = (PaqueteOrdinario) other;
-		return this.costoEnvio == parOr.costoEnvio;
+		PaqueteOrdinario paqOr = (PaqueteOrdinario) other;
+		return this.costoEnvio == paqOr.costoEnvio;
 	}
 	
 	@Override
@@ -45,7 +43,7 @@ public class PaqueteOrdinario extends Paquete {
 	}
 	
 	private void validarCosto(int costo) {
-		if (costo < 1) throw new IllegalArgumentException("El costo de envío no puede ser menor o igual a 0");
+		if (costo <= 0) throw new IllegalArgumentException("El costo de envío no puede ser menor o igual a 0");
 	}
 
 }
