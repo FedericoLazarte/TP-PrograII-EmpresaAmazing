@@ -1,7 +1,7 @@
 package principal;
 
 import controller.empresa.*;
-
+@SuppressWarnings("unused")
 public class Main {
 	public static void main(String[] args) {
 			EmpresaAmazing empresa = new EmpresaAmazing("30-456789-2");
